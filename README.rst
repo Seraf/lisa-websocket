@@ -1,14 +1,9 @@
 ===============================
-sandbox
+LISA-WEBSOCKET
 ===============================
 
-Sandbox for Sbauza
+This component allows browsers to connect to rabbitmq throught websocket.
 
-* Free software: Apache license
-* Source: http://github.com/sbauza/sandbox
-* Bugs: http://github.com/sbauza/sandbox 
+The websocket server is built upon Tornado and SockJS. It can also be used as webserver to serve the frontend
 
-Features
---------
-
-* TODO
+To launch it, simply execute the service.py file
