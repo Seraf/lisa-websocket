@@ -1,0 +1,3 @@
+[submodule "lisa-websocket/frontend"]
+	path = lisa-websocket/frontend
+	url = https://github.com/project-lisa/lisa-frontend.git
