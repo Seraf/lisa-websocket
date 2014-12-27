@@ -120,6 +120,15 @@ class PikaClient(object):
                                 queue=self.queue_name,
                                 routing_key="client.websocket.%s" % id(self),
                                 callback=self.on_queue_bound)
+        self.rabbit_conn.channel.queue_bind(exchange='lisa',
+                                queue=self.queue_name,
+                                routing_key="client.websocket.all",
+                                callback=self.on_queue_bound)
+
+        self.rabbit_conn.channel.queue_bind(exchange='lisa',
+                                queue=self.queue_name,
+                                routing_key="client.all",
+                                callback=self.on_queue_bound)
 
     def on_queue_bound(self, frame):
         LOGGER.info('PikaClient: Queue Bound, Issuing Basic Consume')
